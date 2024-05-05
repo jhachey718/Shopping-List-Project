@@ -59,7 +59,7 @@ function appendItemToShoppingListEl(item) {
     
     let newEl = document.createElement("li")
     
-    newEl.textContent = itemValue
+    newEl.innerHTML = `<Button id="item-button">${itemValue}</Button>`
     
     newEl.addEventListener("click", function() {
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
